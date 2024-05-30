@@ -29,6 +29,38 @@ nav a:hover {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.content-block {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.profile-block {
+    margin-left: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-block img {
+    max-width: 200px;
+    height: auto;
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logos img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 main h3 {
@@ -59,6 +91,16 @@ footer {
 
 @media (max-width: 768px) {
     .main-content {
-        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-block {
+        margin-right: 0;
+    }
+
+    .profile-block {
+        margin-left: 0;
+        margin-top: 20px;
     }
 }
