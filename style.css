@@ -32,12 +32,12 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    text-align: justify;
 }
 
 .content-block {
     flex: 1;
     margin-right: 20px;
-    text-align: justify;
 }
 
 .profile-block {
