@@ -77,6 +77,10 @@ main p {
 /* New styles for publications */
 .publications-content {
     margin-bottom: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .publications-content .smallcaps {
