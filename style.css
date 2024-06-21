@@ -87,7 +87,7 @@ main p {
 
 .publications-content ul {
     list-style-type: none;
-    /* padding: 0; */
+    padding: 0;
 }
 
 .publications-content li {
