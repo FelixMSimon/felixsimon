@@ -135,34 +135,4 @@ footer {
         margin-top: 20px;
     }
 
-        /* Adjust font sizes for better readability on mobile */
-    body {
-        font-size: 16px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-
-    /* Ensure list items wrap properly */
-    .publications-content ul {
-        padding-left: 20px;
-    }
-
-    .publications-content li {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-    }
-}
-
-/* Additional style to ensure links don't overflow on mobile */
-a {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
 }
