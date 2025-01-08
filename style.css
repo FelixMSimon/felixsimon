@@ -6,27 +6,18 @@ body {
     align-items: center;
 }
 
-header {
+header, nav {
     text-align: center;
     padding: 0 10px;
     width: 100%;
     box-sizing: border-box;
 }
 
-header h1 {
-    font-size: 1.8em;
-    margin: 10px 0;
-}
-
-header h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
+header h1 { font-size: 1.8em; margin: 10px 0; }
+header h3 { font-size: 1.2em; margin: 10px 0; }
 
 nav {
     margin: 15px 0;
-    text-align: center;
-    width: 100%;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -43,75 +34,72 @@ nav a {
 
 .main-content {
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
+    display: flex;
+    gap: 20px;
 }
 
-.publications-content {
-    margin-bottom: 20px;
+.content-block {
+    flex: 2;
 }
 
-.publications-content ul {
-    padding-left: 15px;
+.profile-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
 }
 
-.publications-content li {
-    margin-bottom: 15px;
-    word-wrap: break-word;
+.logos img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    object-fit: contain;
 }
 
-.publications-content a {
-    word-break: break-all;
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: blue;
 }
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-    
-    header h3 {
-        font-size: 1em;
+    .main-content {
+        flex-direction: column;
     }
 
-    main h3 {
-        font-size: 1.3em;
-    }
-    
-    main h4 {
-        font-size: 1.1em;
-    }
-
-    .publications-content li {
-        font-size: 0.9em;
-        line-height: 1.4;
+    .profile-block {
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    nav {
-        margin: 10px 0;
+    .logos img {
+        max-width: 200px;
     }
 
-    nav a {
-        margin: 0 8px;
-        font-size: 0.9em;
-    }
+    header h1 { font-size: 1.5em; }
+    header h3 { font-size: 1em; }
+    nav a { margin: 0 8px; font-size: 0.9em; }
 }
 
 @media (max-width: 480px) {
-    body {
-        margin: 5px;
-    }
-
-    .main-content {
-        padding: 0 10px;
-    }
+    body { margin: 5px; }
+    .main-content { padding: 0 10px; }
+    header h1 { font-size: 1.3em; }
     
-    header h1 {
-        font-size: 1.3em;
-    }
-
-    .publications-content li {
-        font-size: 0.85em;
+    .logos img {
+        max-width: 150px;
     }
 }
