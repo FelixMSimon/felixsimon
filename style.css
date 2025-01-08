@@ -1,6 +1,6 @@
 body {
     font-family: "Times New Roman", Times, serif;
-    margin: 20px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,131 +8,110 @@ body {
 
 header {
     text-align: center;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+header h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
 nav {
-    margin: 20px 0;
+    margin: 15px 0;
     text-align: center;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 5px 0;
 }
 
 nav a {
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
     color: blue;
-}
-
-nav a:hover {
-    text-decoration: underline;
+    display: inline-block;
+    padding: 5px 0;
 }
 
 .main-content {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
-.content-block {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.profile-block {
-    margin-left: 20px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.profile-block img {
-    max-width: 200px;
-    height: auto;
-}
-
-.logos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0px;
-}
-
-.logos img {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-main h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-main p {
-    font-size: 1em;
-    line-height: 1.15;
-    margin-bottom: 10px;
-}
-
-/* New styles for publications */
 .publications-content {
-    margin-bottom: 30px;
-}
-
-.publications-content .smallcaps {
-    font-variant: small-caps;
-    font-weight: bold;
-    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .publications-content ul {
-    list-style-type: none;
-    padding: 0;
+    padding-left: 15px;
 }
 
 .publications-content li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    word-wrap: break-word;
 }
 
 .publications-content a {
-    color: blue;
-    text-decoration: none;
-}
-
-.publications-content a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.social-media a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: blue;
-}
-
-.social-media a:hover {
-    text-decoration: underline;
+    word-break: break-all;
 }
 
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    header h3 {
+        font-size: 1em;
+    }
+
+    main h3 {
+        font-size: 1.3em;
+    }
+    
+    main h4 {
+        font-size: 1.1em;
+    }
+
+    .publications-content li {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    nav {
+        margin: 10px 0;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 5px;
+    }
+
     .main-content {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 15px;
+        padding: 0 10px;
+    }
+    
+    header h1 {
+        font-size: 1.3em;
     }
 
-    .content-block {
-        margin-right: 0;
-        width: 100%;
+    .publications-content li {
+        font-size: 0.85em;
     }
-
-    .profile-block {
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
 }
