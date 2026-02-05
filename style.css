@@ -3,9 +3,26 @@
     --color-primary: #0000EE;
     --color-primary-hover: #0000CC;
     --color-text: #000000;
+    --color-background: #FFFFFF;
     --color-focus: #FF6B00;
     --font-serif: "Times New Roman", Times, serif;
     --spacing-unit: 10px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #6B9FFF;
+        --color-primary-hover: #A0C4FF;
+        --color-text: #E0E0E0;
+        --color-background: #1A1A1A;
+        --color-focus: #FF9B50;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -15,6 +32,8 @@ body {
     flex-direction: column;
     align-items: center;
     color: var(--color-text);
+    background-color: var(--color-background);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header, nav {
@@ -164,8 +183,59 @@ a:hover {
     body { margin: 5px; }
     .main-content { padding: 0 10px; }
     header h1 { font-size: 1.3em; }
-    
+
     .logos img {
         max-width: 150px;
+    }
+}
+
+/* Print styles */
+@media print {
+    /* Hide navigation and non-essential elements */
+    nav, footer, .social-media {
+        display: none !important;
+    }
+
+    /* Reset colors for printing */
+    body {
+        background-color: white;
+        color: black;
+        margin: 1cm;
+    }
+
+    /* Remove link colors */
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+
+    /* Show URLs after links */
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        font-style: italic;
+    }
+
+    /* Prevent page breaks inside elements */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    ul, ol, img {
+        page-break-inside: avoid;
+    }
+
+    /* Optimize layout for print */
+    .main-content {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .profile-block {
+        display: none;
+    }
+
+    .content-block {
+        width: 100%;
     }
 }
