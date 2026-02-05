@@ -1,9 +1,20 @@
+/* CSS Variables for consistency */
+:root {
+    --color-primary: #0000EE;
+    --color-primary-hover: #0000CC;
+    --color-text: #000000;
+    --color-focus: #FF6B00;
+    --font-serif: "Times New Roman", Times, serif;
+    --spacing-unit: 10px;
+}
+
 body {
-    font-family: "Times New Roman", Times, serif;
-    margin: 10px;
+    font-family: var(--font-serif);
+    margin: var(--spacing-unit);
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--color-text);
 }
 
 header, nav {
@@ -27,9 +38,21 @@ nav {
 nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: blue;
+    color: var(--color-primary);
     display: inline-block;
     padding: 5px 0;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}
+
+nav a:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 .main-content {
@@ -72,7 +95,8 @@ nav a {
 }
 
 .publications-content a {
-    word-break: break-all;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 footer {
@@ -84,7 +108,30 @@ footer {
 .social-media a {
     margin: 0 10px;
     text-decoration: none;
-    color: blue;
+    color: var(--color-primary);
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.social-media a:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+}
+
+.social-media a:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* General link styles for accessibility */
+a:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,11 @@
+# robots.txt for www.felixsimon.net
+# Allow all robots (search engines and AI crawlers) to index the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.felixsimon.net/sitemap.xml
+
+# Crawl delay (optional, helps prevent server overload)
+Crawl-delay: 1
