@@ -22,9 +22,21 @@
     <meta property="twitter:site" content="@_FelixSimon_">
 
     <link rel="stylesheet" href="style.css">
-    <script src="components.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Felix M. Simon</h1>
+        <h3>Research Fellow in AI, Information, and News | Reuters Institute | University of Oxford</h3>
+    </header>
+    <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="media.html">Media Coverage</a>
+        <a href="biography.html">Biography</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="contact.html">Contact</a>
+    </nav>
     <div class="main-content">
         <main>
             <h3>Research</h3>
@@ -39,9 +51,293 @@
             <p>
             One of the joys of academic work is collaborating with others. I have had the great luck of working with a number of wonderful scholars, technologists, journalists, and other practitioners listed here alphabetically (if I missed you, please reach out. Ongoing collaborations are not yet included. Affiliations are up-to-date for the time of our last collaboration):
             </p>
-            <p>
-            Sacha Altay (Department of Political Science, University of Zurich), Amy A. Ross Arguedas (Reuters Institute, University of Oxford), Kim Björn Becker (FAZ), Alexandra Borchardt (Independent), Oliver Blewett (Centre for Climate Change and Data Science, University of Exeter), J. Scott Brennen (Center on Technology Policy, University of North Carolina at Chapel Hill), Andrea Carson (La Trobe University), Tristan J. B. Cann (Centre for Climate Change and Data Science, University of Exeter), Chico Q. Camargo (Department of Computer Science, University of Exeter), Travis Coan (Centre for Climate Change and Data Science, University of Exeter), Alessio Cornia (Dublin City University), Christopher Crum (Oxford Internet Institute, University of Oxford), Tomás Dodds (Leiden University Centre for Linguistics, Leiden University), Sophie G. Einwächter (Department of Media Studies, Philipps-University Marburg), Motahhare Eslami (School of Computer Science, Carnegie Mellon University), Xianzhe Fan (Department of Computer Science, Tsinghua University), Richard Fletcher (Reuters Institute, University of Oxford), Francisco Gonzalez Espinosa (Centre for Climate Change and Data Science, University of Exeter), Lucas Graves (School of Journalism, UW–Madison), Sylvia Hayes (Centre for Climate Change and Data Science, University of Exeter), Natali Helberger (Institute for Information Law, University of Amsterdam), Vinzenz Hediger (Department of Film Studies, Goethe-Universität Frankfurt), Alfred Hermida (School of Journalism, University of British Columbia), Phil Howard (Oxford Internet Institute, University of Oxford), Alastair Johnstone-Hack (Climate Visuals), Antonis Kalogeropoulos (Department of Politics, Vrije Universiteit Brussels), Seth C. Lewis (University of Oregon), Liz Lohn (Financial Times), Julia Lück (Department of Communication, Johannes Gutenberg-Universität Mainz), Sílvia Majó-Vázquez (Department of Communication, Vrije Universiteit Amsterdam), Keegan McBride (Oxford Internet Institute, University of Oxford), Hugo Mercier (CNRS Institut Jean Nicod), Rasmus Kleis Nielsen (Reuters Institute, University of Oxford), Jason R.C. Nurse (University of Kent), Saffron O'Neill (Centre for Climate Change and Data Science, University of Exeter), Julie Posetti (ICFJ), Simon Puttock (Centre for Climate Change and Data Science, University of Exeter), Sarwat Qureshi (Oxford Internet Institute, University of Oxford), Jan Rau (Leibniz-Institute for Media Research, Hans-Bredow-Institut (HBI)), Valeria Resendez (Cognition, Data and Education, University of Twente), Ralph Schroeder (Oxford Internet Institute, University of Oxford), Annika Sehl (Department of Communication, Catholic University of Eichstätt-Ingolstadt), Felix M. Simon (Reuters Institute for the Study of Journalism, University of Oxford), Nabeelah Shabbir (ICFJ), Tanjev Schultz (Department of Communication, Johannes Gutenberg University Mainz), Benjamin Toff (Hubbard School of Journalism and Mass Communication, University of Minnesota), Astrid Vandendaele (Leiden University Centre for Linguistics, Leiden University), Veronica White (Centre for Climate Change and Data Science, University of Exeter), Wang Ngai Yeung (Network Science Institute, Northeastern University), Ned Westwood (Centre for Climate Change and Data Science, University of Exeter), Qing Xiao (Human-Computer Interaction Institute, Carnegie Mellon University), Bingbing Zhang (School of Journalism and Mass Communication, University of Iowa).
-            </p>
+            <div class="collab" id="collaborators" itemscope itemtype="https://schema.org/Person">
+                <meta itemprop="name" content="Felix M. Simon">
+                <meta itemprop="url" content="https://www.felixsimon.net/">
+                <div class="collab-controls">
+                    <label class="collab-ctl"><span>Filter</span>
+                        <input type="search" id="collab-search" placeholder="Name or institution&hellip;" autocomplete="off">
+                    </label>
+                    <label class="collab-ctl"><span>Institution</span>
+                        <select id="collab-inst"><option value="">All institutions</option><option value="CNRS Institut Jean Nicod">CNRS Institut Jean Nicod</option><option value="Carnegie Mellon University">Carnegie Mellon University</option><option value="Catholic University of Eichstätt-Ingolstadt">Catholic University of Eichstätt-Ingolstadt</option><option value="Climate Visuals">Climate Visuals</option><option value="Dublin City University">Dublin City University</option><option value="FAZ">FAZ</option><option value="Financial Times">Financial Times</option><option value="Goethe-Universität Frankfurt">Goethe-Universität Frankfurt</option><option value="Hans-Bredow-Institut (HBI)">Hans-Bredow-Institut (HBI)</option><option value="ICFJ">ICFJ</option><option value="Independent">Independent</option><option value="Johannes Gutenberg University Mainz">Johannes Gutenberg University Mainz</option><option value="La Trobe University">La Trobe University</option><option value="Leiden University">Leiden University</option><option value="Northeastern University">Northeastern University</option><option value="Philipps-University Marburg">Philipps-University Marburg</option><option value="Tsinghua University">Tsinghua University</option><option value="UW–Madison">UW–Madison</option><option value="University of Amsterdam">University of Amsterdam</option><option value="University of British Columbia">University of British Columbia</option><option value="University of Exeter">University of Exeter</option><option value="University of Kent">University of Kent</option><option value="University of Minnesota">University of Minnesota</option><option value="University of North Carolina at Chapel Hill">University of North Carolina at Chapel Hill</option><option value="University of Oregon">University of Oregon</option><option value="University of Oxford">University of Oxford</option><option value="University of Twente">University of Twente</option><option value="University of Zurich">University of Zurich</option><option value="Vrije Universiteit Amsterdam">Vrije Universiteit Amsterdam</option><option value="Vrije Universiteit Brussels">Vrije Universiteit Brussels</option></select>
+                    </label>
+                    <span class="collab-count" id="collab-count" aria-live="polite"></span>
+                </div>
+                <div class="collab-scroll">
+                <table class="collab-table">
+                    <caption class="visually-hidden">Research collaborators, with department and institution</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"><button type="button" class="collab-sort" data-col="0">Name</button></th>
+                            <th scope="col"><button type="button" class="collab-sort" data-col="1">Department</button></th>
+                            <th scope="col"><button type="button" class="collab-sort" data-col="2">Institution</button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Sacha Altay</td>
+                        <td class="collab-dept">Department of Political Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Zurich</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Amy A. Ross Arguedas</td>
+                        <td class="collab-dept">Reuters Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oxford</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Kim Björn Becker</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">FAZ</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Oliver Blewett</td>
+                        <td class="collab-dept">Centre for Climate Change and Data Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Exeter</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Alexandra Borchardt</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Independent</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">J. Scott Brennen</td>
+                        <td class="collab-dept">Center on Technology Policy</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of North Carolina at Chapel Hill</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Chico Q. Camargo</td>
+                        <td class="collab-dept">Department of Computer Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Exeter</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Tristan J. B. Cann</td>
+                        <td class="collab-dept">Centre for Climate Change and Data Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Exeter</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Andrea Carson</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">La Trobe University</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Travis Coan</td>
+                        <td class="collab-dept">Centre for Climate Change and Data Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Exeter</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Alessio Cornia</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Dublin City University</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Christopher Crum</td>
+                        <td class="collab-dept">Oxford Internet Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oxford</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Tomás Dodds</td>
+                        <td class="collab-dept">Leiden University Centre for Linguistics</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Leiden University</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Sophie G. Einwächter</td>
+                        <td class="collab-dept">Department of Media Studies</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Philipps-University Marburg</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Motahhare Eslami</td>
+                        <td class="collab-dept">School of Computer Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Carnegie Mellon University</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Xianzhe Fan</td>
+                        <td class="collab-dept">Department of Computer Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Tsinghua University</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Richard Fletcher</td>
+                        <td class="collab-dept">Reuters Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oxford</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Francisco Gonzalez Espinosa</td>
+                        <td class="collab-dept">Centre for Climate Change and Data Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Exeter</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Lucas Graves</td>
+                        <td class="collab-dept">School of Journalism</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">UW–Madison</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Franziska Sofia Hafner</td>
+                        <td class="collab-dept">Oxford Internet Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oxford</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Sylvia Hayes</td>
+                        <td class="collab-dept">Centre for Climate Change and Data Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Exeter</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Vinzenz Hediger</td>
+                        <td class="collab-dept">Department of Film Studies</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Goethe-Universität Frankfurt</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Natali Helberger</td>
+                        <td class="collab-dept">Institute for Information Law</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Amsterdam</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Alfred Hermida</td>
+                        <td class="collab-dept">School of Journalism</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of British Columbia</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Phil Howard</td>
+                        <td class="collab-dept">Oxford Internet Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oxford</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Alastair Johnstone-Hack</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Climate Visuals</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Antonis Kalogeropoulos</td>
+                        <td class="collab-dept">Department of Politics</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Vrije Universiteit Brussels</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Seth C. Lewis</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oregon</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Liz Lohn</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Financial Times</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Julia Lück</td>
+                        <td class="collab-dept">Department of Communication</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Johannes Gutenberg University Mainz</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Sílvia Majó-Vázquez</td>
+                        <td class="collab-dept">Department of Communication</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Vrije Universiteit Amsterdam</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Keegan McBride</td>
+                        <td class="collab-dept">Oxford Internet Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oxford</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Hugo Mercier</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">CNRS Institut Jean Nicod</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Rasmus Kleis Nielsen</td>
+                        <td class="collab-dept">Reuters Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oxford</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Jason R.C. Nurse</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Kent</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Saffron O&#x27;Neill</td>
+                        <td class="collab-dept">Centre for Climate Change and Data Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Exeter</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Julie Posetti</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">ICFJ</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Simon Puttock</td>
+                        <td class="collab-dept">Centre for Climate Change and Data Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Exeter</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Sarwat Qureshi</td>
+                        <td class="collab-dept">Oxford Internet Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oxford</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Jan Rau</td>
+                        <td class="collab-dept">Leibniz-Institute for Media Research</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Hans-Bredow-Institut (HBI)</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Valeria Resendez</td>
+                        <td class="collab-dept">Cognition, Data and Education</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Twente</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Luc Rocher</td>
+                        <td class="collab-dept">Oxford Internet Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oxford</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Ralph Schroeder</td>
+                        <td class="collab-dept">Oxford Internet Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Oxford</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Tanjev Schultz</td>
+                        <td class="collab-dept">Department of Communication</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Johannes Gutenberg University Mainz</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Annika Sehl</td>
+                        <td class="collab-dept">Department of Communication</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Catholic University of Eichstätt-Ingolstadt</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Nabeelah Shabbir</td>
+                        <td class="collab-dept">&mdash;</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">ICFJ</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Benjamin Toff</td>
+                        <td class="collab-dept">Hubbard School of Journalism and Mass Communication</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Minnesota</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Astrid Vandendaele</td>
+                        <td class="collab-dept">Leiden University Centre for Linguistics</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Leiden University</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Ned Westwood</td>
+                        <td class="collab-dept">Centre for Climate Change and Data Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Exeter</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Veronica White</td>
+                        <td class="collab-dept">Centre for Climate Change and Data Science</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">University of Exeter</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Qing Xiao</td>
+                        <td class="collab-dept">Human-Computer Interaction Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Carnegie Mellon University</span></td>
+                    </tr>
+                    <tr itemprop="knows" itemscope itemtype="https://schema.org/Person">
+                        <td itemprop="name">Wang Ngai Yeung</td>
+                        <td class="collab-dept">Network Science Institute</td>
+                        <td itemprop="affiliation" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Northeastern University</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
             <p><b>Integrity Statement</b></p>
             <p>
             My research and doctoral work has been supported by the Leverhulme Trust, the OII-Dieter Schwarz Foundation award, Columbia University’s Tow Center for Digital Journalism, the Minderoo-Oxford AI Governance Challenge Fund, the Knight First Amendment Institute at Colubmbia University, and the Balliol Interdisciplinary Institute. In the past I have also worked as a research assistant or researcher on projects supported by the Deutsche Telekom Foundation, European Broadcasting Union, European Journalism Observatory, Google News Initiative, Facebook Journalism Innovation Project, IPPI/Heinrich Böll Foundation, and the Nuffield Foundation.
@@ -56,5 +352,55 @@ I sat on the AI and Local News Steering Committee of Partnership on AI, which is
     <footer>
         <p>&copy; 2026 Dr. Felix M. Simon. All rights reserved.</p>
     </footer>
+    <script>
+    // The full table is present in the HTML; this only adds sorting and filtering
+    // on top of it, so the list still reads correctly with JavaScript unavailable.
+    (function () {
+        var root = document.getElementById('collaborators');
+        if (!root) return;
+        document.documentElement.classList.add('collab-js');
+        var tbody = root.querySelector('tbody');
+        var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+        var search = document.getElementById('collab-search');
+        var inst = document.getElementById('collab-inst');
+        var count = document.getElementById('collab-count');
+        var collator = new Intl.Collator('en', { sensitivity: 'base' });
+
+        function report() {
+            var n = rows.filter(function (r) { return !r.hidden; }).length;
+            count.textContent = n + (n === 1 ? ' collaborator' : ' collaborators');
+        }
+        function apply() {
+            var q = search.value.trim().toLowerCase();
+            var i = inst.value;
+            rows.forEach(function (r) {
+                var matchesText = !q || r.textContent.toLowerCase().indexOf(q) > -1;
+                var matchesInst = !i || r.cells[2].textContent === i;
+                r.hidden = !(matchesText && matchesInst);
+            });
+            report();
+        }
+        search.addEventListener('input', apply);
+        inst.addEventListener('change', apply);
+
+        root.querySelectorAll('.collab-sort').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var col = +btn.dataset.col;
+                var dir = btn.dataset.dir === 'asc' ? 'desc' : 'asc';
+                root.querySelectorAll('.collab-sort').forEach(function (b) {
+                    b.removeAttribute('data-dir');
+                    b.removeAttribute('aria-sort');
+                });
+                btn.dataset.dir = dir;
+                btn.setAttribute('aria-sort', dir === 'asc' ? 'ascending' : 'descending');
+                rows.slice().sort(function (a, b) {
+                    var r = collator.compare(a.cells[col].textContent, b.cells[col].textContent);
+                    return dir === 'asc' ? r : -r;
+                }).forEach(function (r) { tbody.appendChild(r); });
+            });
+        });
+        report();
+    })();
+    </script>
 </body>
 </html>

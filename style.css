@@ -239,3 +239,134 @@ a:hover {
         width: 100%;
     }
 }
+
+/* ---- Collaborators table (research.html) ---- */
+.visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.collab {
+    margin: 15px 0 25px;
+}
+
+/* Hidden by default: without JavaScript these controls do nothing,
+   so the enhancement script reveals them by setting .collab-js */
+.collab-controls {
+    display: none;
+    gap: 20px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.collab-js .collab-controls {
+    display: flex;
+}
+
+.collab-ctl {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.collab-ctl span {
+    font-size: 0.7em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.collab-ctl input,
+.collab-ctl select {
+    font-family: var(--font-serif);
+    font-size: 0.95em;
+    padding: 5px 7px;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-text);
+    border-radius: 2px;
+    min-width: 200px;
+    max-width: 100%;
+}
+
+.collab-count {
+    font-size: 0.85em;
+    opacity: 0.75;
+    padding-bottom: 7px;
+}
+
+.collab-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.collab-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.95em;
+}
+
+.collab-table th {
+    text-align: left;
+    padding: 0;
+    border-bottom: 2px solid var(--color-text);
+}
+
+.collab-sort {
+    font-family: var(--font-serif);
+    font-size: 0.78em;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 0;
+    color: var(--color-text);
+    padding: 6px 12px 6px 0;
+    cursor: pointer;
+}
+
+.collab-sort::after {
+    content: " \2195";
+    opacity: 0.4;
+}
+
+.collab-sort[data-dir="asc"]::after  { content: " \2191"; opacity: 1; }
+.collab-sort[data-dir="desc"]::after { content: " \2193"; opacity: 1; }
+.collab-sort:hover { color: var(--color-primary); }
+
+.collab-table td {
+    padding: 6px 12px 6px 0;
+    border-bottom: 1px solid var(--color-text);
+    vertical-align: top;
+}
+
+/* hairline rows: the 1px border above is softened so the names lead */
+.collab-table tbody tr td { border-bottom-color: rgba(128, 128, 128, 0.35); }
+
+.collab-dept {
+    opacity: 0.78;
+    font-size: 0.95em;
+}
+
+.collab-table tr[hidden] { display: none; }
+
+@media (max-width: 768px) {
+    .collab-table { font-size: 0.85em; }
+    .collab-ctl input,
+    .collab-ctl select { min-width: 0; width: 100%; }
+    .collab-controls { gap: 12px; }
+    .collab-ctl { flex: 1 1 100%; }
+}
+
+/* Print: controls are useless on paper; the table is not */
+@media print {
+    .collab-controls { display: none !important; }
+    .collab-table { font-size: 10pt; }
+    .collab-table tr { page-break-inside: avoid; }
+}
