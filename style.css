@@ -370,3 +370,21 @@ a:hover {
     .collab-table { font-size: 10pt; }
     .collab-table tr { page-break-inside: avoid; }
 }
+
+/* ---- Latest News (index.html) ---- */
+/* Still a list semantically, so screen readers announce the item count,
+   but without bullets: the date prefix marks where each entry begins. */
+.news-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.news-list li {
+    margin-bottom: 1.2em;
+    line-height: 1.4;
+}
+
+.news-list li:last-child {
+    margin-bottom: 0;
+}
