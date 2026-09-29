@@ -388,3 +388,8 @@ a:hover {
 .news-list li:last-child {
     margin-bottom: 0;
 }
+
+.news-more {
+    margin: 0.6em 0 0;
+    font-size: 0.9em;
+}
